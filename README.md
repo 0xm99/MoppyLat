@@ -17,7 +17,7 @@ you need python - pip - web3
 >}
 
 ## Run script:
-> python3 PyLat2
+> python3 MoppyLat.py
 
 
 
