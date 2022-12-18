@@ -16,7 +16,6 @@ print(colored(255, 0, 0,"moppynodes.com"))
 
 for endpoint in endpoints:
     request_times[endpoint] = []
-    # Check if endpoint is HTTP or WebSocket
     if endpoint.startswith("http"):
         web3 = Web3(Web3.HTTPProvider(endpoint))
     elif endpoint.startswith("ws"):
