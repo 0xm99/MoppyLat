@@ -16,5 +16,8 @@ Edit settings.json example:
 >
 >}
 
+Run script:
+> python3 PyLat2
+
 
 
