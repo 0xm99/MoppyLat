@@ -1,6 +1,6 @@
 # MoppyLat
 
-# Moppy Node Python Latency Tester
+# Moppy Node  Latency Tester (Python)
 you need python - pip - web3
 
 ## Install python pip
