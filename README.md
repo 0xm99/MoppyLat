@@ -4,10 +4,10 @@
 you need python - pip - web3
 
 Install python pip
->sudo apt install python3-pip -y
+> apt install python3-pip -y
 
 Install web3
->pip install web3
+> pip install web3
 
 Edit settings.json example:
 >{
