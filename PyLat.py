@@ -2,24 +2,18 @@ import time
 import json
 from web3 import Web3
 
-#
 def colored(r, g, b, text):
     return f"\033[38;2;{r};{g};{b}m{text}\033[0m"
 
-
-# JSON
 with open("settings.json") as f:
     settings = json.load(f)
 
-# Endpoints
 endpoints = settings["endpoints"]
 
-# 
 request_times = {}
 print ("")
 print(colored(255, 0, 0,"moppynodes.com"))
 
-# 
 for endpoint in endpoints:
     request_times[endpoint] = []
     # Check if endpoint is HTTP or WebSocket
@@ -39,7 +33,7 @@ for endpoint in endpoints:
         request_count += 1
         print(f"request n° {request_count} - endpoint {endpoint}: {'{:.3f}'.format((end_time - start_time) * 1000)} millisecondes.", end="\r")
         
-# 
+
 for endpoint, times in request_times.items():
     average_time = sum(times) / len(times)
     
