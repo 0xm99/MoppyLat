@@ -12,11 +12,17 @@ endpoints = settings["endpoints"]
 
 request_times = {}
 print ("")
-print ("Moppy Node Python Latency tester")
-print ("v0.1")
+print (colored(0, 255, 127,"    ******************************"))
+print (colored(0, 255, 127,"    * Moppy Node Latency tester  *"))
+print (colored(0, 255, 127,"    * v0.1                       *"))
+print (colored(0, 255, 127,"    ******************************"))
+print ("")
+
+# Get the number of calls from the user
+print ("Enter the amount of request to make for the test")
+num_calls = int(input("(Public nodes: 100-150 // Private Node, 800-1000) : "))
 print ("")
 print(colored(255, 0, 0,"moppynodes.com"))
-
 for endpoint in endpoints:
     request_times[endpoint] = []
     if endpoint.startswith("http"):
@@ -27,18 +33,18 @@ for endpoint in endpoints:
         print(f"Unsupported endpoint: {endpoint}")
         continue
     request_count = 0
-    while request_count < 1000:
+    while request_count < num_calls:
         start_time = time.time()
         code = web3.eth.get_code("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56")
         end_time = time.time()
         request_times[endpoint].append(end_time - start_time)
         request_count += 1
         print(f"request n° {request_count} - endpoint {endpoint}: {'{:.3f}'.format((end_time - start_time) * 1000)} millisecondes.", end="\r")
-        
+
 
 for endpoint, times in request_times.items():
     average_time = sum(times) / len(times)
-    
+
     print(f"Average latency time for {endpoint} is  {'{:.3f}'.format(average_time * 1000)} millisecondes.")
 
 print(colored(255, 0, 0,"moppynodes.com"))
