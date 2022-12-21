@@ -20,4 +20,13 @@ you need python - pip - web3
 > python3 MoppyLat.py
 
 
+## windows version
+> download moppylat.exe + settings.json
+
+> edit settings.json
+
+> run the .exe !
+
+
+
 
