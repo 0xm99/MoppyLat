@@ -1,0 +1,9 @@
+{
+
+"endpoints": [
+  
+  "https://bsc-dataseed1.binance.org/",
+  "https://rpc.ankr.com/bsc"
+
+]
+}
