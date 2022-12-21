@@ -12,6 +12,9 @@ endpoints = settings["endpoints"]
 
 request_times = {}
 print ("")
+print ("Moppy Node Python Latency tester")
+print ("v0.1")
+print ("")
 print(colored(255, 0, 0,"moppynodes.com"))
 
 for endpoint in endpoints:
