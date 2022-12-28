@@ -1,6 +1,6 @@
-# MoppyLat
+# Moppy Node Latency Tester
 
-# Moppy Node  Latency Tester (Python)
+# Python Version
 you need python - pip - web3
 
 ## Install python pip
@@ -20,7 +20,7 @@ you need python - pip - web3
 > python3 MoppyLat.py
 
 
-## windows version
+# Windows Version
 Download moppylat.exe + settings.json here: https://github.com/0xm99/MoppyLat/tree/main/Windows
 
 > edit settings.json
